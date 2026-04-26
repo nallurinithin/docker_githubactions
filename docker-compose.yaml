@@ -1,0 +1,8 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile #use this Dockerfile to build the image of the app
+    restart: unless-stopped  #if crashes it will restart the container unless we stop it manually
+    ports:
+      - "3000:8080"
