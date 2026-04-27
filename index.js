@@ -6,7 +6,7 @@ const PORT = process.env.PORT ?? 8080
 
 app.get('/',(req,res)=>{
     return res.json({msg:
-        'Hello from CI/CD pipeline! - updated after deployment 🚀'
+        'Hello from CI/CD pipeline! - FULL AUTO DEPLOY WORKING! 🚀'
     })
 })
 
