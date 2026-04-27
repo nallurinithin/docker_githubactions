@@ -25,3 +25,6 @@ jobs:
           context: . # the context is set to the current directory where the Dockerfile is located.
           push: true # this option tells the action to push the image to Docker Hub after building it.
           tags: ${{ secrets.DOCKER_USERNAME }}/docker_githubactions:latest # the tag for the Docker image, which includes the Docker Hub username and the name of the image. The "latest" tag indicates that this is the most recent version of the image.
+
+      - name: Trigger Render Deploy
+        run: curl ${{ secrets.RENDER_DEPLOY_HOOK }} # this step triggers a deployment on Render using a webhook URL stored in the repository secrets. This allows the newly built Docker image to be deployed to the Render platform automatically after it is pushed to Docker Hub.
