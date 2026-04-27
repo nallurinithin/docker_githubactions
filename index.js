@@ -6,7 +6,7 @@ const PORT = process.env.PORT ?? 8080
 
 app.get('/',(req,res)=>{
     return res.json({msg:
-        'Hello from the server from docker_githubactions!'
+        'Hello from CI/CD pipeline! 🚀'
     })
 })
 
